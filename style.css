@@ -1,0 +1,597 @@
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  margin: 0;
+  padding: 0;
+  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.main-container {
+  min-width: 400px;
+}
+.main-container nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.main-container nav .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #1d809f;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.main-container nav .sidenav .menu-tab {
+  margin-top: 20px;
+}
+.main-container nav .sidenav a {
+  padding: 30px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  text-align: left;
+  font-size: 16px;
+}
+.main-container nav .sidenav a:hover {
+  color: #f1f1f1;
+  background-color: rgba(235, 233, 233, 0.2);
+}
+.main-container nav .sidenav .closebtn {
+  position: absolute;
+  top: -25px;
+  right: 10px;
+  font-size: 36px;
+  padding-bottom: 20px;
+  margin-left: 50px;
+}
+.main-container nav #main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+.main-container nav .span-class {
+  color: white;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+.main-container nav .sidenav .menu-span {
+  font-size: 22px;
+  padding-right: 120px;
+}
+@media screen and (max-height: 450px) {
+  .main-container nav .sidenav {
+    padding-top: 15px;
+  }
+  .main-container nav .sidenav a {
+    font-size: 18px;
+  }
+}
+.main-container nav .buttonMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+.main-container nav .buttonMenu:hover {
+  background-color: rgba(12, 15, 56, 0.7);
+}
+.main-container .buttonUp {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}
+.main-container .buttonUp a {
+  text-decoration: none;
+}
+.main-container .buttonUp a p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+.main-container .buttonUp p:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.main-container #advbox {
+  visibility: hidden;
+}
+.main-container header {
+  background-image: url(/images/header.jpg);
+  background-repeat: space;
+  background-position: right;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container header h1,
+.main-container header h3,
+.main-container header a {
+  margin: 0;
+  text-align: center;
+  padding: 0 50px;
+}
+.main-container header h1 {
+  font-size: 50px;
+  width: 50%;
+}
+.main-container header h3 {
+  font-style: italic;
+  font-size: 19px;
+  margin-top: 10px;
+  width: 50%;
+}
+.main-container header button {
+  color: white;
+  background-color: #1d809f;
+  width: 176px;
+  height: 66px;
+  border-radius: 0.25rem;
+  font-size: 16px;
+  margin-top: 40px;
+  border: none;
+}
+.main-container header button:hover {
+  background-color: #0c566d;
+  cursor: pointer;
+}
+.main-container main .about {
+  height: 540px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container main .about button {
+  color: white;
+  background-color: #2d3135;
+  border: none;
+  width: 176px;
+  height: 66px;
+  border-radius: 0.25rem;
+  font-size: 16px;
+  margin-top: 40px;
+}
+.main-container main .about button:hover {
+  background-color: #212529;
+  cursor: pointer;
+}
+.main-container main .about h2,
+.main-container main .about p {
+  margin: 0;
+  text-align: center;
+  padding: 0 50px;
+  width: 68%;
+}
+.main-container main .about p {
+  margin-top: 10px;
+}
+.main-container main .services {
+  height: 130vh;
+  background-color: #1d809f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Source Sans Pro;
+}
+.main-container main .services h2,
+.main-container main .services h3 {
+  margin: 0;
+  text-align: center;
+}
+.main-container main .services h3 {
+  color: #ecb807;
+  font-size: 16px;
+}
+.main-container main .services .service-h2 {
+  font-size: 48px;
+}
+.main-container main .services .responsive,
+.main-container main .services .redesigned,
+.main-container main .services .favorited,
+.main-container main .services .question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container main .services .responsive h2,
+.main-container main .services .responsive p,
+.main-container main .services .redesigned h2,
+.main-container main .services .redesigned p,
+.main-container main .services .favorited h2,
+.main-container main .services .favorited p,
+.main-container main .services .question h2,
+.main-container main .services .question p {
+  margin: 10px;
+}
+.main-container main .services .responsive img,
+.main-container main .services .redesigned img,
+.main-container main .services .favorited img,
+.main-container main .services .question img {
+  width: 80px;
+  margin: 20px 0;
+}
+.main-container main .callout {
+  height: 796px;
+  background-image: url(/images/inside_foto.jpg);
+  background-repeat: space;
+  background-position: 50% 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container main .callout h1 {
+  text-align: center;
+  padding: 0 50px;
+  font-size: 50px;
+}
+.main-container main .callout button {
+  color: white;
+  background-color: #2b93b3;
+  width: 176px;
+  height: 66px;
+  border-radius: 0.25rem;
+  font-size: 16px;
+  margin-top: 40px;
+  border: none;
+}
+.main-container main .callout button:hover {
+  cursor: pointer;
+  background-color: #1d809f;
+}
+.main-container main .portfolio {
+  height: 1314px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container main .portfolio h3 {
+  color: #ecb807;
+  font-size: 19.2px;
+}
+.main-container main .portfolio .portfolio-h2 {
+  font-size: 48px;
+  margin-top: 0;
+  width: 80%;
+  text-align: center;
+}
+.main-container main .portfolio .allProject {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+}
+.main-container main .portfolio .allProject h2 {
+  font-size: 12.8px;
+  text-transform: uppercase;
+}
+.main-container main .portfolio .allProject .stationary,
+.main-container main .portfolio .allProject .iceCream,
+.main-container main .portfolio .allProject .strawberries,
+.main-container main .portfolio .allProject .workspace {
+  position: relative;
+  text-align: center;
+}
+.main-container main .portfolio .allProject .stationary .content1,
+.main-container main .portfolio .allProject .iceCream .content1,
+.main-container main .portfolio .allProject .strawberries .content1,
+.main-container main .portfolio .allProject .workspace .content1 {
+  position: absolute;
+  top: 50px;
+  width: 70%;
+  text-align: left;
+  left: 50%;
+  transform: translateX(-60%);
+  color: white;
+}
+.main-container main .portfolio .allProject .stationary a,
+.main-container main .portfolio .allProject .iceCream a,
+.main-container main .portfolio .allProject .strawberries a,
+.main-container main .portfolio .allProject .workspace a {
+  text-decoration: none;
+  color: white;
+}
+.main-container main .portfolio .allProject .stationary img,
+.main-container main .portfolio .allProject .iceCream img,
+.main-container main .portfolio .allProject .strawberries img,
+.main-container main .portfolio .allProject .workspace img {
+  max-width: 300px;
+  cursor: pointer;
+}
+.main-container main .content {
+  height: 455px;
+  background-color: #1d809f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-container main .content h2 {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  padding: 0 50px;
+}
+.main-container main .content .content-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.main-container main .content button {
+  height: 66px;
+  border-radius: 0.25rem;
+  font-size: 16px;
+}
+.main-container main .content .white-btn {
+  color: black;
+  background-color: white;
+  width: 156px;
+  height: 70px;
+  border: none;
+}
+.main-container main .content .white-btn:hover {
+  cursor: pointer;
+}
+.main-container main .content .black-btn {
+  color: white;
+  background-color: #111111;
+  width: 176px;
+  height: 66px;
+  margin-left: 5px;
+  border: none;
+}
+.main-container main .content .black-btn:hover {
+  cursor: pointer;
+  background-color: black;
+}
+.main-container main .contact {
+  height: 600px;
+}
+.main-container footer {
+  height: 200px;
+  margin: 80px 0 0 0;
+}
+.main-container footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  column-gap: 10px;
+  margin-top: 30px;
+  padding: 0;
+}
+.main-container footer li .round-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  width: 65px;
+  background-color: #1d809f;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.main-container footer li .round-area svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+.main-container footer li .round-area:hover {
+  background-color: #116781;
+  cursor: pointer;
+}
+.main-container footer p {
+  margin-top: 50px;
+  text-align: center;
+  color: grey;
+  font-size: 14px;
+}
+.main-container footer img:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .main-container header {
+    height: 60vh;
+    background-position: 25% 25%;
+  }
+  .main-container main .about {
+    height: 490px;
+  }
+  .main-container main .about h2 {
+    font-size: 28px;
+  }
+  .main-container main .about p {
+    font-size: 20px;
+  }
+  .main-container main .services {
+    height: 80vh;
+    background-color: #1d809f;
+    display: flex;
+    color: white;
+    font-family: Source Sans Pro;
+  }
+  .main-container main .services h2 {
+    margin-bottom: 30px;
+  }
+  .main-container main .services .tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .main-container main .callout h1 {
+    width: 65%;
+  }
+  .main-container main .portfolio {
+    height: 2014px;
+  }
+  .main-container main .portfolio .allProject {
+    row-gap: 10px;
+  }
+  .main-container main .portfolio .allProject h2 {
+    font-size: 12.8px;
+    text-transform: uppercase;
+  }
+  .main-container main .portfolio .allProject .stationary .content1,
+.main-container main .portfolio .allProject .iceCream .content1,
+.main-container main .portfolio .allProject .strawberries .content1,
+.main-container main .portfolio .allProject .workspace .content1 {
+    top: 280px;
+    width: 85%;
+    transform: translateX(-50%);
+  }
+  .main-container main .portfolio .allProject .stationary .content1 p,
+.main-container main .portfolio .allProject .iceCream .content1 p,
+.main-container main .portfolio .allProject .strawberries .content1 p,
+.main-container main .portfolio .allProject .workspace .content1 p {
+    font-family: Source Sans Pro;
+    font-size: 20px;
+  }
+  .main-container main .portfolio .allProject .stationary img,
+.main-container main .portfolio .allProject .iceCream img,
+.main-container main .portfolio .allProject .strawberries img,
+.main-container main .portfolio .allProject .workspace img {
+    max-width: 600px;
+    cursor: pointer;
+  }
+  .main-container main .content {
+    height: 400px;
+  }
+  .main-container main .content .content-buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .main-container header {
+    height: 100vh;
+    background-position: 35% 70%;
+  }
+  .main-container header h1 {
+    font-size: 88px;
+  }
+  .main-container header h3 {
+    font-style: italic;
+    font-size: 28px;
+    margin-top: 10px;
+  }
+  .main-container header .buttonUp2 {
+    display: none;
+  }
+  .main-container main .services {
+    height: 60vh;
+  }
+  .main-container main .services .tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .main-container main .services .responsive img,
+.main-container main .services .redesigned img,
+.main-container main .services .favorited img,
+.main-container main .services .question img {
+    width: 100px;
+    margin: 20px 50px;
+  }
+  .main-container main .about h2 {
+    font-size: 32px;
+  }
+  .main-container main .about p {
+    font-size: 20px;
+  }
+  .main-container main .callout {
+    height: 896px;
+  }
+  .main-container main .callout h1 {
+    width: 35%;
+    margin-bottom: 0;
+  }
+  .main-container main .portfolio {
+    height: 1150px;
+  }
+  .main-container main .portfolio .allProject {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0px;
+  }
+  .main-container main .portfolio .allProject a {
+    height: 100%;
+  }
+  .main-container main .portfolio .allProject h2 {
+    font-size: 12.8px;
+    text-transform: uppercase;
+  }
+  .main-container main .portfolio .allProject .stationary,
+.main-container main .portfolio .allProject .iceCream,
+.main-container main .portfolio .allProject .strawberries,
+.main-container main .portfolio .allProject .workspace {
+    height: 100%;
+  }
+  .main-container main .portfolio .allProject .stationary .content1,
+.main-container main .portfolio .allProject .iceCream .content1,
+.main-container main .portfolio .allProject .strawberries .content1,
+.main-container main .portfolio .allProject .workspace .content1 {
+    top: 170px;
+    width: 80%;
+    top: 260px;
+  }
+  .main-container main .portfolio .allProject .stationary .content1 p,
+.main-container main .portfolio .allProject .iceCream .content1 p,
+.main-container main .portfolio .allProject .strawberries .content1 p,
+.main-container main .portfolio .allProject .workspace .content1 p {
+    font-family: Source Sans Pro;
+    font-size: 20px;
+    color: white;
+  }
+  .main-container main .portfolio .allProject .stationary .content1 h2,
+.main-container main .portfolio .allProject .iceCream .content1 h2,
+.main-container main .portfolio .allProject .strawberries .content1 h2,
+.main-container main .portfolio .allProject .workspace .content1 h2 {
+    color: white;
+  }
+  .main-container main .portfolio .allProject .stationary img,
+.main-container main .portfolio .allProject .iceCream img,
+.main-container main .portfolio .allProject .strawberries img,
+.main-container main .portfolio .allProject .workspace img {
+    max-width: 595px;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+    transition-property: all;
+    transition-timing-function: ease;
+  }
+  .main-container main .portfolio .allProject .stationary img:hover,
+.main-container main .portfolio .allProject .iceCream img:hover,
+.main-container main .portfolio .allProject .strawberries img:hover,
+.main-container main .portfolio .allProject .workspace img:hover {
+    transform: scale(90%);
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
